@@ -1,0 +1,17 @@
+public static BSTNode insert(int value, BSTNode current)
+{		
+	if(current == null)
+	{
+		BSTNode newNode = new BSTNode(value);
+		return newNode;
+	}
+	else
+	{
+		if(value < current.value)
+			current.leftChild = insert(value, current.leftChild);
+		else
+			current.rightChild = insert(value, current.rightChild);
+	}		
+	return current;
+}
+
